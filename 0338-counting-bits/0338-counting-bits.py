@@ -1,9 +1,4 @@
-class Solution:
-    def toBinary(self, x: int): 
-        if (x <= 1): 
-            return x % 2;
-        return self.toBinary(x // 2) + x % 2;
-                   
+class Solution:    
     def countBits(self, n: int) -> List[int]:
         result = [];
         memory = {};
