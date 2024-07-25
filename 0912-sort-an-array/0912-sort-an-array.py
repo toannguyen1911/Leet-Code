@@ -1,4 +1,5 @@
 class Solution:
+    # Merge two array
     def mergeArray(self,l_array, r_array):
           l = 0
           r = 0
@@ -16,6 +17,7 @@ class Solution:
               return result + l_array[l:]
             r += 1
 
+    #devide array to two sub-array
     def mergeSort(self,nums, left, right):
       if (left == right):
         return [nums[left]]
