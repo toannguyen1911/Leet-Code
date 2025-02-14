@@ -3,13 +3,19 @@ import math
 class ProductOfNumbers:
 
     def __init__(self):
-        self.stream = [];
+        self.products = [1];
+        self.n = 1;
 
     def add(self, num: int) -> None:
-        self.stream.append(num);
+        if num == 0:
+            self.n = 1;
+            self.products = [1];
+        else:
+            self.n += 1;
+            self.products.append(self.products[-1] * num);
 
     def getProduct(self, k: int) -> int:
-        return math.prod(self.stream[len(self.stream) - k:])
+        return 0 if self.n <= k else self.products[-1] // self.products[-k-1];
         
 
 
