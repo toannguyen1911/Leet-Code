@@ -5,8 +5,8 @@ class Solution:
         # choice 1: sub array + current num; 
         # choic2 2: start new sub array
         # maxEnding at index i = max(maxEnding at index (i – 1) + arr[i], arr[i]) 
-        max_ending_here = nums[0];
-        min_ending_here = nums[0];
+        max_ending = nums[0];
+        min_ending = nums[0];
         max_so_far = nums[0];
         min_so_far = nums[0];
 
