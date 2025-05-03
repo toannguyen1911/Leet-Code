@@ -6,11 +6,14 @@ class Solution:
         # Target: All the values in tops are the same, or all the values in bottoms are the same.
         # Suppose tops or bottoms contain all "target" values.
         for i in range (n):
+            # Target can only be the first value of tops or bottoms.
+            if tops[i] != tops[0] and tops[i] != bottoms[0] and bottoms[i] != tops[0] and bottoms[i] != bottoms[0]:
+                return -1;
             counter[tops[i] -1] += 1;
             if bottoms[i] != tops[i]:
                 counter[bottoms[i] -1] += 1;
 
-        # Target can only be the first value of tops or bottoms.
+        
         if counter[tops[0] -1] < n and counter[bottoms[0] -1] < n:
             return -1;
         
