@@ -1,33 +1,21 @@
 class Solution:
     def minDominoRotations(self, tops: List[int], bottoms: List[int]) -> int:
-        n = len(tops);
-        counter = [0] * 6;
 
-        # Target: All the values in tops are the same, or all the values in bottoms are the same.
-        # Suppose tops or bottoms contain all "target" values.
-        for i in range (n):
-            # Target can only be the first value of tops or bottoms.
-            if tops[i] != tops[0] and tops[i] != bottoms[0] and bottoms[i] != tops[0] and bottoms[i] != bottoms[0]:
-                return -1;
-            counter[tops[i] -1] += 1;
-            if bottoms[i] != tops[i]:
-                counter[bottoms[i] -1] += 1;
+        c_top = Counter(tops)
+        c_bot = Counter(bottoms)
 
-        
-        if counter[tops[0] -1] < n and counter[bottoms[0] -1] < n:
-            return -1;
-        
-        target = tops[0] if counter[tops[0] -1] == n else bottoms[0];
-        t_target = 0;
-        b_target = 0;
-        
-        for i in range(n):
-            if tops[i] == bottoms[i]:
-                continue;
-            if tops[i] == target:
-                t_target += 1;
-            if bottoms[i] == target:
-                b_target += 1;
+        n = len(tops)
 
-        return min(t_target, b_target);
-       
+        for k, v in c_top.items():
+            if v + c_bot[k] >= n:
+                # Check valid
+                dup = 0
+                for i in range(n):
+                    if tops[i] != k and bottoms[i] != k:
+                        break
+                    elif tops[i] == bottoms[i]:
+                        dup += 1
+                else:
+                    return min(v, c_bot[k]) - dup
+
+        return -1
