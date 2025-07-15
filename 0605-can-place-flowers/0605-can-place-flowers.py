@@ -1,17 +1,14 @@
 class Solution:
     def canPlaceFlowers(self, flowerbed: List[int], n: int) -> bool:
-        pre_planted = 0;
-        planted = 0;
+        k = len(flowerbed);
 
-        for i in range (len(flowerbed) -1):
-            if pre_planted or flowerbed[i] or flowerbed[i +1]:
-                pre_planted = flowerbed[i];
-                print(i)
-                continue;
-            planted += 1;
-            pre_planted = 1;
+        if n == 0:
+            return True;
 
-        if (not pre_planted and not flowerbed[-1]):
-            planted += 1;
-
-        return planted >= n;
+        for i in range (k):
+            if (i == 0 or not flowerbed[i -1]) and not flowerbed[i] and (i == k -1 or not flowerbed[i +1]):
+                flowerbed[i] = 1;
+                n -= 1;
+                if n == 0:
+                    return True;
+        return False;
