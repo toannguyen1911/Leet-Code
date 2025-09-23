@@ -5,20 +5,12 @@ class Solution:
         i, n, m = 0, len(ver1), len(ver2);
 
         while (i < n or i < m):
-            if i >= n :
-                a = 0;
-                b = ver2[i];
-            elif i >= m:
-                b = 0;
-                a = ver1[i];
-            else: a, b =  ver1[i], ver2[i];
+            num1 = int(ver1[i]) if i < n else 0;
+            num2 = int(ver2[i]) if i < m else 0;
             i += 1;
 
-            a = int (a);
-            b = int(b);
-            if a < b:
+            if num1 < num2:
                 return -1;
-            if a > b:
+            if num1 > num2:
                 return 1;
-
         return 0;
