@@ -10,6 +10,6 @@ class Solution:
                 cnt += 1;
                 continue;
             if cnt > 0:
-                res = (res + (cnt * (cnt + 1) // 2)) % mod;
+                res += (cnt * (cnt + 1) // 2) % mod;
                 cnt = 0;
         return res;
