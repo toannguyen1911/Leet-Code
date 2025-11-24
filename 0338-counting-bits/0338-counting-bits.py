@@ -1,23 +1,20 @@
-class Solution:    
+class Solution:
     def countBits(self, n: int) -> List[int]:
-        result = [];
-        memory = {};
+        """
+        Pattern:
+            0, 1, 10, 11, 100, 101, 110, 111, 1000, 1001, 1010
+            => 8 (1000), 9 (1001) = x + 1(01), 10 (1010) = x + 2(10)
+            11(1011) = x + 3(11)
         
-        for index in range(n + 1):
-            count = 0;
-            x = index;
-            
-            while (x > 0):
-                if (x in memory):
-                    count += memory[x];
-                    break;
-                count += x % 2;
-                x = x //2;
-                
-            if (index not in memory):
-                memory[index] = count;
-            result.append(count);
-        
-        return result;
-        
-        
+        Time complexity: O(n)
+        Space complexity: O(n)
+        """
+        dp = [0] * (n +1);
+        sub = 1;
+
+        for i in range(1, n +1):
+            if sub *2 == i:
+                sub = i;
+            dp[i] = dp[i - sub] + 1;
+
+        return dp;
