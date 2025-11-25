@@ -1,6 +1,16 @@
 class Solution:
     def smallestRepunitDivByK(self, k: int) -> int:
         """
+        (A+B) % k = ((A % k) + (B % k)) % k
+        (A×B) % k = ((A % k) × (B % k)) % k
+
+        Math:
+            n % k = rem
+            n' = n *10 +1 (1, 11, 111, 1111, ...)
+            n' % k = new_rem
+            <=> (n *10 +1) % k = new_rem
+            <=> (n % k) *10 + 1) % k 
+            => (rem *10 +1) %k = new_rem
         Time complexity: O(k)
         Space complexity: O(1)
         """
