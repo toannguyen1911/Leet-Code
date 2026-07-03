@@ -7,6 +7,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1536-minimum-swaps-to-arrange-a-binary-grid](https://github.com/toannguyen1911/Leet-Code/tree/main/1536-minimum-swaps-to-arrange-a-binary-grid/) | Medium |
+| [2812-find-the-safest-path-in-a-grid](https://github.com/toannguyen1911/Leet-Code/tree/main/2812-find-the-safest-path-in-a-grid/) | Medium |
 ## Greedy
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -15,6 +16,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1536-minimum-swaps-to-arrange-a-binary-grid](https://github.com/toannguyen1911/Leet-Code/tree/main/1536-minimum-swaps-to-arrange-a-binary-grid/) | Medium |
+| [2812-find-the-safest-path-in-a-grid](https://github.com/toannguyen1911/Leet-Code/tree/main/2812-find-the-safest-path-in-a-grid/) | Medium |
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -28,4 +30,20 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1545-find-kth-bit-in-nth-binary-string](https://github.com/toannguyen1911/Leet-Code/tree/main/1545-find-kth-bit-in-nth-binary-string/) | Medium |
+## Binary Search
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [2812-find-the-safest-path-in-a-grid](https://github.com/toannguyen1911/Leet-Code/tree/main/2812-find-the-safest-path-in-a-grid/) | Medium |
+## Breadth-First Search
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [2812-find-the-safest-path-in-a-grid](https://github.com/toannguyen1911/Leet-Code/tree/main/2812-find-the-safest-path-in-a-grid/) | Medium |
+## Union-Find
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [2812-find-the-safest-path-in-a-grid](https://github.com/toannguyen1911/Leet-Code/tree/main/2812-find-the-safest-path-in-a-grid/) | Medium |
+## Heap (Priority Queue)
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [2812-find-the-safest-path-in-a-grid](https://github.com/toannguyen1911/Leet-Code/tree/main/2812-find-the-safest-path-in-a-grid/) | Medium |
 <!---LeetCode Topics End-->
